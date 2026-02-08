@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Art Gallery: Authentication</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="./index.html">
+        <div class="logo">AG</div>
+        <div class="brand-text">
+          <div class="brand-title">Art Gallery</div>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a class="nav-link" href="./index.html">Home</a>
+        <a class="nav-link" href="./catalog.html">Catalog</a>
+        <a class="nav-link" href="./artists.html">Artists</a>
+        <a class="nav-link" href="./contacts.html">Contacts</a>
+      </nav>
+
+      <div class="nav-right">
+        <a class="btn btn-ghost" href="./auth.html">Login</a>
+      </div>
+    </div>
+  </header>
+
+<main class="wrap section auth-page">
+  <div class="auth-container">
+  <div class="auth-head">
+
+      <h2>Account</h2>
+    </div>
+
+    <div class="auth-grid">
+      <section class="panel">
+        <div class="panel-title">Login</div>
+        <form class="form" id="loginForm">
+          <label>
+            <span>Email</span>
+            <input name="email" type="email" placeholder="name@mail.com" required />
+          </label>
+          <label>
+            <span>Password</span>
+            <input name="password" type="password" placeholder="••••••••" required />
+          </label>
+          <button class="btn btn-primary" type="submit">Login</button>
+          <div class="toast hidden" id="loginToast"></div>
+        </form>
+      </section>
+
+      
+      <section class="panel">
+        <div class="panel-title">Registration</div>
+        <form class="form" id="registerForm">
+          <label>
+            <span>Username</span>
+            <input name="username" placeholder="yourname" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input name="email" type="email" placeholder="name@mail.com" required />
+          </label>
+          <label>
+            <span>Password</span>
+            <input name="password" type="password" placeholder="minimum 6 characters" required />
+          </label>
+          <button class="btn btn-primary" type="submit">Create Account</button>
+          <div class="toast hidden" id="registerToast"></div>
+        </form>
+      </section>
+    </div>
+  </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="muted">©Yasmin's Art Gallery</div>
+    </div>
+  </footer>
+
+  <script src="./js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Art Gallery: Catalog</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="./index.html">
+        <div class="logo">AG</div>
+        <div class="brand-text">
+          <div class="brand-title">Art Gallery</div>
+          <div class="brand-sub">Catalog</div>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a class="nav-link" href="./index.html">Home</a>
+        <a class="nav-link active" href="./catalog.html">Catalog</a>
+        <a class="nav-link" href="./artists.html">Artists</a>
+        <a class="nav-link" href="./contacts.html">Contacts</a>
+      </nav>
+
+      <div class="nav-right">
+        <input class="search" id="searchArt" placeholder="Search by title..." />
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap section">
+    <div class="section-head">
+      <h2>Catalog</h2>
+      <div class="filters">
+        <select id="filterCategory" class="select">
+          <option value="">All Categories</option>
+          <option value="painting">Painting</option>
+          <option value="digital">Digital</option>
+          <option value="sculpture">Sculpture</option>
+        </select>
+
+        <select id="sortBy" class="select">
+          <option value="date_desc">Newest First</option>
+          <option value="date_asc">Oldest First</option>
+          <option value="title_asc">Title A→Z</option>
+          <option value="title_desc">Title Z→A</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="grid grid-3" id="catalogGrid"></div>
+
+    <div class="empty hidden" id="catalogEmpty">
+      <div class="empty-title">No Results Found</div>
+      <div class="muted">Try changing the filter or search term</div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="muted">©Yasmin's Art Gallery</div>
+    </div>
+  </footer>
+
+  <script src="./js/site.js"></script>
+</body>
+</html>

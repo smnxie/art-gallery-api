@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Art Gallery: Artists</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="./index.html">
+        <div class="logo">AG</div>
+        <div class="brand-text">
+          <div class="brand-title">Art Gallery</div>
+          <div class="brand-sub">Artists</div>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a class="nav-link" href="./index.html">Home</a>
+        <a class="nav-link" href="./catalog.html">Catalog</a>
+        <a class="nav-link active" href="./artists.html">Artists</a>
+        <a class="nav-link" href="./contacts.html">Contacts</a>
+      </nav>
+
+      <div class="nav-right">
+        <input class="search" id="searchArtists" placeholder="Search by name..." />
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap section">
+    <div class="section-head">
+      <h2>Artists</h2>
+      <div class="muted">Name, description, and contacts</div>
+    </div>
+
+    <div class="list" id="artistsList"></div>
+
+    <div class="empty hidden" id="artistsEmpty">
+      <div class="empty-title">No results found</div>
+      <div class="muted">Try a different name</div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="muted">©Yasmin'sGallery</div>
+      <div class="muted">Artists</div>
+    </div>
+  </footer>
+
+  <script src="./js/site.js"></script>
+</body>
+</html>

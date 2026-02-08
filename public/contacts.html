@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Art Gallery: Contacts</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="./index.html">
+        <div class="logo">AG</div>
+        <div class="brand-text">
+          <div class="brand-title">Art Gallery</div>
+          <div class="brand-sub">Contacts</div>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a class="nav-link" href="./index.html">Home</a>
+        <a class="nav-link" href="./catalog.html">Catalog</a>
+        <a class="nav-link" href="./artists.html">Artists</a>
+        <a class="nav-link active" href="./contacts.html">Contacts</a>
+      </nav>
+
+      <div class="nav-right">
+        <a class="btn btn-primary" href="./catalog.html">Catalog</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap section">
+    <div class="section-head">
+      <h2>Contacts</h2>
+      <div class="muted">Get in touch with the gallery</div>
+    </div>
+
+    <div class="contacts-grid">
+      <div class="panel">
+        <div class="panel-title">Gallery</div>
+        <div class="kv">
+          <div class="k">Email</div><div class="v"><a class="link" href="mailto:gallery@example.com">gallery@example.com</a></div>
+          <div class="k">Phone</div><div class="v"><a class="link" href="tel:+77000000000">+7 700 000 00 00</a></div>
+          <div class="k">City</div><div class="v">Astana</div>
+          <div class="k">Instagram</div><div class="v"><span class="pill">@artgallery</span></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">Contact Us</div>
+        <form class="form" id="contactForm">
+          <label>
+            <span>Name</span>
+            <input required name="name" placeholder="Your name" />
+          </label>
+          <label>
+            <span>Email</span>
+            <input required type="email" name="email" placeholder="you@mail.com" />
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea required name="message" rows="5" placeholder="Your message..."></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit">Send</button>
+          <div class="toast hidden" id="contactToast"></div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="muted">© Yasmin's Art Gallery</div>
+      <div class="muted">Contacts</div>
+    </div>
+  </footer>
+
+  <script src="./js/site.js"></script>
+</body>
+</html>
