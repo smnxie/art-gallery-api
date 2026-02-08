@@ -1,8 +1,28 @@
+# Art Gallery API
+
+## Project Overview
 I developed the Art Gallery API as a backend web application using Node.js and Express.js. The main goal of this project is to provide a secure REST API where users can register, authenticate, and manage their own artworks. After registration and login, users are able to create, view, update, and delete artworks that belong only to them. Access to private resources is protected using JSON Web Tokens (JWT), which ensures that only authenticated users can interact with protected endpoints.
-For the project setup, I used Node.js and Express.js to build the server and followed a modular project structure with separate folders for routes, controllers, models, middleware, and configuration files. MongoDB is used as the database, and Mongoose is used for schema creation and data modeling. To run the project locally, the user needs to install dependencies using npm, create a .env file with environment variables such as the MongoDB connection string and JWT secret, and start the server using the development script. The server runs on a specified port and connects to the database using environment-based configuration.
+
+## Project Setup and Installation
+For the project setup, I used Node.js and Express.js to build the server and followed a modular project structure with separate folders for routes, controllers, models, middleware, and configuration files. MongoDB is used as the database, and Mongoose is used for schema creation and data modeling. To run the project locally, the user needs to install dependencies using npm, create a `.env` file with environment variables such as the MongoDB connection string and JWT secret, and start the server using the development script. The server runs on a specified port and connects to the database using environment-based configuration.
+
+## Database Models
 The project includes two main database collections. The User collection stores user information such as username, email, hashed password, and role. The Artwork collection stores information about artworks, including title, description, image URL, category, and a reference to the user who owns the artwork. This relationship ensures that each artwork is linked to a specific user and that users can only access their own data.
+
+## Authentication and Security
 Authentication is implemented using JWT. When a user logs in, the server generates a token that must be included in the Authorization header for all private requests. Passwords are securely hashed using bcrypt before being stored in the database. Middleware is used to verify tokens and protect private routes such as user profile access and artwork management.
+
+## API Documentation
 The API documentation includes public authentication routes and private resource routes. Public endpoints allow users to register and log in. Private endpoints allow authenticated users to retrieve and update their profile, as well as perform full CRUD operations on artworks, including creating a new artwork, retrieving all artworks, retrieving a specific artwork by ID, updating an artwork, and deleting an artwork. All private routes require a valid JWT token.
+
+## External API Integration
 To enhance the functionality of the application, I integrated external APIs. The Unsplash API is used to search for artwork images, and The Metropolitan Museum of Art API is used to retrieve public artwork information. This makes the project more dynamic and closer to a real-world application.
-Input validation is implemented using middleware to ensure correct and complete data. A global error-handling middleware is used to return meaningful HTTP status codes such as 400 for bad requests, 401 for unauthorized access, 404 for not found errors, and 500 for server errors. All sensitive data is stored in environment variables, and the application is ready for deployment on platforms such as Render or Railway.
+
+## Validation and Error Handling
+Input validation is implemented using middleware to ensure correct and complete data. A global error-handling middleware is used to return meaningful HTTP status codes such as 400 for bad requests, 401 for unauthorized access, 404 for not found errors, and 500 for server errors.
+
+## Deployment
+All sensitive data is stored in environment variables, and the application is ready for deployment on platforms such as Render or Railway.
+
+## Conclusion
 This project demonstrates my understanding of backend development concepts, including RESTful API design, authentication and authorization, database modeling, middleware usage, external API integration, and secure application development.
